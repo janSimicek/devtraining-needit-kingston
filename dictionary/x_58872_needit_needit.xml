@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element label="New Field 1" max_length="40" name="new_field_1" type="integer"/>
+        <element label="new field 2" max_length="20" name="new_field_2" type="integer"/>
+        <element label="When needed" mandatory="true" max_length="40" name="u_glide_when_needed" type="glide_date_time"/>
+        <element label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="ritc" label="Requested type" mandatory="true" max_length="40" name="u_requested_type" type="string">
+            <choice>
+                <element label="Human resources" sequence="0" value="hr"/>
+                <element label="Facilities" sequence="1" value="facilities"/>
+                <element label="Regional IT departement" sequence="2" value="ritc"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="ritc1" label="What needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element label="Human resources 1" sequence="0" value="he1"/>
+                <element label="Human resources 2" sequence="1" value="hr2"/>
+                <element label="Facilities 1" sequence="2" value="facilities1"/>
+                <element label="Facilities 2" sequence="3" value="facilities2"/>
+                <element label="RITC 1" sequence="4" value="ritc1"/>
+                <element label="RITC 2" sequence="5" value="ritc2"/>
+            </choice>
+        </element>
+    </element>
+</database>
